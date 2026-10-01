@@ -11,7 +11,6 @@
     <meta property="og:image" content="https://mrkoynov.github.io/transgaz-nevyansk-invitation-preview/social-preview.png" />
     <title>Приглашение на день рождения предприятия</title>
     <link rel="stylesheet" href="styles.css" />
-    <script src="script.js" defer></script>
   </head>
   <body>
     <header class="site-header">
@@ -64,23 +63,17 @@
 
       <section class="content-section form-section" id="guest-form" aria-labelledby="form-title">
         <h2 id="form-title">Анкета гостя</h2>
-        <p class="form-intro">Пожалуйста, отметьте, сможете ли вы присутствовать, и выберите интересующие мастер-классы.</p>
-        <form id="rsvp-form" novalidate>
-          <label for="guest-name">Фамилия, имя и отчество <span class="required">*</span></label>
-          <input id="guest-name" name="guestName" type="text" autocomplete="name" placeholder="Введите ФИО" required maxlength="120" />
-
-          <fieldset class="attendance-fieldset"><legend>Планируете прийти? <span class="required">*</span></legend><div class="choice-row"><label><input type="radio" name="attendance" value="yes" required /> Да, приду</label><label><input type="radio" name="attendance" value="no" /> Нет, не смогу</label></div></fieldset>
-
-          <fieldset id="workshop-fieldset"><legend>Какие мастер-классы вам интересны? <span class="optional">Необязательно</span></legend><div class="checkbox-list"><label><input type="checkbox" name="workshop" value="роспись таволожской керамики" /> Роспись таволожской керамики</label><label><input type="checkbox" name="workshop" value="чеканка демидовских монет" /> Чеканка демидовских монет</label><label><input type="checkbox" name="workshop" value="охота на куниц" /> Охота на куниц</label></div></fieldset>
-
-          <label for="guest-note">Комментарий <span class="optional">Необязательно</span></label>
-          <textarea id="guest-note" name="note" rows="3" maxlength="300" placeholder="Если хотите что-то сообщить организаторам"></textarea>
-
-          <p class="demo-note">Это макет анкеты. Ответ пока не отправляется организатору.</p>
-          <button type="submit">Посмотреть мой ответ</button>
-          <p class="form-error" id="form-error" role="alert" hidden></p>
-        </form>
-        <div class="form-result" id="form-result" hidden aria-live="polite"><h3>Ваш ответ</h3><p id="result-text"></p><p class="demo-note">Это только просмотр: данные не отправлены.</p><button type="button" id="edit-response" class="secondary-button">Изменить ответ</button></div>
+        <div class="rsvp-panel">
+          <div>
+            <span class="small-label">Ваш ответ важен</span>
+            <h3>Будете с нами?</h3>
+            <p>Сообщите, планируете ли вы прийти. В анкете также можно выбрать мастер-классы и оставить комментарий организатору.</p>
+          </div>
+          <div class="rsvp-action">
+            <a class="rsvp-link" href="https://docs.google.com/forms/d/e/1FAIpQLSfNufHCUHn0jru9lvoqx1xPsjLA_sWsaLaPiySQA0vXSbu58w/viewform" target="_blank" rel="noopener noreferrer">Ответить на приглашение <span aria-hidden="true">↗</span></a>
+            <p>Откроется Google-форма. После отправки ответ сохранится в таблице организатора.</p>
+          </div>
+        </div>
       </section>
     </main>
 
