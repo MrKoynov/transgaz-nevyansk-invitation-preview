@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#1764a8" />
+    <meta name="theme-color" content="#102f51" />
     <meta name="description" content="Приглашение на день рождения предприятия 23 июля 2027 года. Начало в 16:00 у Невьянской башни." />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="День рождения предприятия · 23 июля 2027" />
     <meta property="og:description" content="Приглашение на праздник у Невьянской башни. Начало в 16:00." />
     <meta property="og:image" content="https://mrkoynov.github.io/transgaz-nevyansk-invitation-preview/social-preview.png" />
     <title>Приглашение на день рождения предприятия</title>
-    <link rel="stylesheet" href="styles.css?v=3" />
+    <link rel="stylesheet" href="styles.css?v=4" />
     <script src="script.js?v=2" defer></script>
   </head>
   <body>
@@ -23,42 +23,45 @@
     <main class="wrap">
       <section class="invitation" aria-labelledby="page-title">
         <div class="invitation-content">
-          <p class="section-label">Приглашение · 23 июля 2027</p>
-          <h1 id="page-title">День рождения предприятия</h1>
-          <p class="intro-text">Уважаемые коллеги! Приглашаем вас провести этот день вместе в Невьянске.</p>
-          <div class="event-summary">
-            <div><span>Начало</span><strong>16:00</strong></div>
-            <div><span>Место</span><strong>Невьянская башня</strong></div>
+          <p class="section-label"><span class="label-line" aria-hidden="true"></span> ПРИГЛАШЕНИЕ</p>
+          <div class="hero-date"><strong>23</strong><span>ИЮЛЯ<br />2027</span></div>
+          <h1 id="page-title">День рождения <em>предприятия</em></h1>
+          <p class="intro-text">Уважаемые коллеги! Приглашаем вас провести этот день вместе у Невьянской башни.</p>
+          <div class="hero-actions">
+            <a class="primary-link" href="#guest-form">Ответить на приглашение <span aria-hidden="true">↗</span></a>
+            <span class="hero-time">Начало в <strong>16:00</strong></span>
           </div>
-          <a class="primary-link" href="#guest-form">Заполнить анкету гостя <span aria-hidden="true">→</span></a>
         </div>
-        <figure class="hero-photo"><img src="nevyansk-tower.jpg" alt="Невьянская башня" loading="eager" /><figcaption><small>МЕСТО ВСТРЕЧИ</small><strong>Невьянская башня</strong></figcaption></figure>
+        <figure class="hero-photo"><img src="nevyansk-tower-hd.jpg" alt="Невьянская башня" loading="eager" fetchpriority="high" /><figcaption><small>МЕСТО ВСТРЕЧИ / НЕВЬЯНСК</small><strong>Невьянская башня</strong></figcaption></figure>
       </section>
 
-      <section class="content-section" id="program" aria-labelledby="program-title">
-        <h2 id="program-title">Программа</h2>
-        <div class="schedule">
-          <div class="schedule-item">
-            <div class="schedule-time">16:00–17:00</div>
-            <div class="schedule-content"><h3>Встреча гостей</h3><p>Велком-зона с мастер-классами:</p><ul><li>роспись таволожской керамики;</li><li>чеканка демидовских монет;</li><li>охота на куниц.</li></ul></div>
-          </div>
-          <div class="schedule-item">
-            <div class="schedule-time">17:00–19:00</div>
-            <div class="schedule-content"><h3>Торжественное мероприятие</h3></div>
-          </div>
-          <div class="schedule-item">
-            <div class="schedule-time">После 19:00</div>
-            <div class="schedule-content"><h3>Дискотека</h3></div>
-          </div>
+      <div class="event-strip" aria-label="Основная информация о мероприятии">
+        <div><span>01 / ДАТА</span><strong>23 июля 2027</strong></div>
+        <div><span>02 / ВРЕМЯ</span><strong>С 16:00</strong></div>
+        <div><span>03 / МЕСТО</span><strong>Сквер Демидовых, 3</strong></div>
+      </div>
+
+      <section class="program-section" id="program" aria-labelledby="program-title">
+        <div class="section-heading"><div><p class="section-kicker">ПЛАН ВСТРЕЧИ</p><h2 id="program-title">Программа дня<span class="title-dot">.</span></h2></div><p>От первых встреч до танцев — этот день проведём вместе.</p></div>
+        <div class="program-grid">
+          <article class="program-card program-card-welcome">
+            <div class="program-top"><span>01 / ВСТРЕЧА</span><span class="program-card-mark" aria-hidden="true">✳</span></div>
+            <div class="program-body"><span class="program-time">16:00 <i>—</i> 17:00</span><h3>Встреча гостей</h3><p>Велком-зона и мастер-классы:</p><ul><li>Роспись таволожской керамики</li><li>Чеканка демидовских монет</li><li>Охота на куниц</li></ul></div>
+          </article>
+          <article class="program-card">
+            <div class="program-top"><span>02 / ТОРЖЕСТВО</span><span class="program-card-arrow" aria-hidden="true">↗</span></div>
+            <div class="program-body"><span class="program-time">17:00 <i>—</i> 19:00</span><h3>Торжественное мероприятие</h3></div>
+          </article>
+          <article class="program-card program-card-last">
+            <div class="program-top"><span>03 / ВЕЧЕР</span><span class="program-card-arrow" aria-hidden="true">↗</span></div>
+            <div class="program-body"><span class="program-time">После 19:00</span><h3>Дискотека</h3></div>
+          </article>
         </div>
       </section>
 
-      <section class="content-section" id="location" aria-labelledby="location-title">
-        <h2 id="location-title">Место проведения</h2>
-        <div class="location-box">
-          <div><span class="small-label">Адрес</span><p>Невьянск, Сквер Демидовых, 3<br />Территория Невьянской башни</p><a href="https://yandex.ru/maps/?text=%D0%9D%D0%B5%D0%B2%D1%8C%D1%8F%D0%BD%D1%81%D0%BA%2C%20%D0%A1%D0%BA%D0%B2%D0%B5%D1%80%20%D0%94%D0%B5%D0%BC%D0%B8%D0%B4%D0%BE%D0%B2%D1%8B%D1%85%2C%203" target="_blank" rel="noopener noreferrer">Открыть на карте ↗</a></div>
-          <div><span class="small-label">Парковка</span><p>Автомобильная парковка расположена слева от входа.</p></div>
-        </div>
+      <section class="location-section" id="location" aria-labelledby="location-title">
+        <div class="location-intro"><p class="section-kicker">ГДЕ ВСТРЕЧАЕМСЯ</p><h2 id="location-title">У Невьянской <em>башни</em><span class="title-dot">.</span></h2><p>Территория Невьянской башни<br />Невьянск, Сквер Демидовых, 3</p><a class="map-link" href="https://yandex.ru/maps/?text=%D0%9D%D0%B5%D0%B2%D1%8C%D1%8F%D0%BD%D1%81%D0%BA%2C%20%D0%A1%D0%BA%D0%B2%D0%B5%D1%80%20%D0%94%D0%B5%D0%BC%D0%B8%D0%B4%D0%BE%D0%B2%D1%8B%D1%85%2C%203" target="_blank" rel="noopener noreferrer">Открыть на карте <span aria-hidden="true">↗</span></a></div>
+        <div class="location-detail"><span class="location-icon" aria-hidden="true">P</span><div><span class="location-detail-label">ПАРКОВКА</span><p>Автомобильная парковка расположена слева от входа.</p></div></div>
       </section>
 
       <section class="form-section" id="guest-form" aria-labelledby="form-title">
@@ -128,6 +131,6 @@
       </section>
     </main>
 
-    <footer class="site-footer"><div class="wrap"><span>Макет приглашения · Трансгаз</span><span>Фото: <a href="https://commons.wikimedia.org/wiki/File:%D0%9D%D0%B5%D0%B2%D1%8C%D1%8F%D0%BD%D1%81%D0%BA%D0%B0%D1%8F_%D0%B1%D0%B0%D1%88%D0%BD%D1%8F.jpg" target="_blank" rel="noopener noreferrer">Loolik.89 / Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a> (кадрирование на странице)</span></div></footer>
+    <footer class="site-footer"><div class="wrap"><span>ТРАНСГАЗ · День рождения предприятия</span><span>Фото: <a href="https://commons.wikimedia.org/wiki/File:%D0%9D%D0%B5%D0%B2%D1%8C%D1%8F%D0%BD%D1%81%D0%BA%D0%B0%D1%8F_%D0%B1%D0%B0%D1%88%D0%BD%D1%8F.jpg" target="_blank" rel="noopener noreferrer">Loolik.89 / Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a> (кадрирование на странице)</span></div></footer>
   </body>
 </html>
