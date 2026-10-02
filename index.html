@@ -10,8 +10,8 @@
     <meta property="og:description" content="Приглашение на праздник у Невьянской башни. Начало в 16:00." />
     <meta property="og:image" content="https://mrkoynov.github.io/transgaz-nevyansk-invitation-preview/social-preview.png" />
     <title>Приглашение на день рождения предприятия</title>
-    <link rel="stylesheet" href="styles.css" />
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css?v=2" />
+    <script src="script.js?v=2" defer></script>
   </head>
   <body>
     <header class="site-header">
@@ -62,13 +62,71 @@
         </div>
       </section>
 
-      <section class="content-section form-section" id="guest-form" aria-labelledby="form-title">
-        <h2 id="form-title">Анкета гостя</h2>
-        <p class="form-intro">Пожалуйста, сообщите, планируете ли вы прийти. Здесь же можно выбрать мастер-классы и оставить комментарий организатору.</p>
-        <div class="form-embed">
-          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfNufHCUHn0jru9lvoqx1xPsjLA_sWsaLaPiySQA0vXSbu58w/viewform?embedded=true" title="Анкета гостя: подтверждение участия 23 июля 2027 года">Загрузка анкеты…</iframe>
+      <section class="form-section" id="guest-form" aria-labelledby="form-title">
+        <div class="form-aside">
+          <p class="form-eyebrow">ВАШ ОТВЕТ</p>
+          <h2 id="form-title">Будем рады видеть вас</h2>
+          <p>Сообщите о своих планах и выберите занятия, которые вам интересны. Это поможет нам подготовиться к встрече.</p>
+          <div class="form-date" aria-label="23 июля 2027 года, начало в 16:00">
+            <span class="form-date-day">23</span>
+            <span>ИЮЛЯ<br /><strong>2027</strong></span>
+            <span class="form-date-time">16:00</span>
+          </div>
+          <p class="form-place">Невьянская башня<br /><span>Невьянск · Сквер Демидовых, 3</span></p>
         </div>
-        <p class="form-help">После отправки ответ сохранится в таблице организатора. Если анкета не отображается, <a href="https://docs.google.com/forms/d/e/1FAIpQLSfNufHCUHn0jru9lvoqx1xPsjLA_sWsaLaPiySQA0vXSbu58w/viewform" target="_blank" rel="noopener noreferrer">откройте её отдельно ↗</a>.</p>
+
+        <div class="form-main">
+          <div class="form-heading">
+            <span class="form-heading-mark" aria-hidden="true">✦</span>
+            <div><span class="form-kicker">ПРИГЛАШЕНИЕ</span><h3>Анкета гостя</h3></div>
+          </div>
+
+          <form id="rsvp-form" action="https://docs.google.com/forms/d/e/1FAIpQLSfNufHCUHn0jru9lvoqx1xPsjLA_sWsaLaPiySQA0vXSbu58w/formResponse?embedded=true" method="POST" target="rsvp-receipt">
+            <div class="form-field">
+              <label for="guest-name"><span class="field-number">01</span> Фамилия, имя и отчество <span class="required-mark">*</span></label>
+              <input id="guest-name" name="entry.57952946" type="text" autocomplete="name" placeholder="Как к вам обращаться" maxlength="120" required />
+            </div>
+
+            <fieldset class="form-field choice-field">
+              <legend><span class="field-number">02</span> Планируете прийти? <span class="required-mark">*</span></legend>
+              <div class="attendance-options">
+                <label class="choice-card"><input type="radio" name="entry.1104383228" value="Да, приду" required /><span class="choice-icon" aria-hidden="true">✓</span><span><strong>Да, приду</strong><small>Буду на празднике</small></span></label>
+                <label class="choice-card"><input type="radio" name="entry.1104383228" value="Нет, не смогу прийти" required /><span class="choice-icon" aria-hidden="true">—</span><span><strong>Не смогу</strong><small>В этот раз не получится</small></span></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="form-field workshop-field" id="workshop-field">
+              <legend><span class="field-number">03</span> Какие мастер-классы вам интересны?</legend>
+              <p class="field-hint">Можно выбрать несколько вариантов</p>
+              <div class="workshop-options">
+                <label class="workshop-card"><input type="checkbox" name="entry.540942043" value="Роспись таволожской керамики" /><span class="workshop-index">01</span><span>Роспись таволожской керамики</span><span class="workshop-check" aria-hidden="true">✓</span></label>
+                <label class="workshop-card"><input type="checkbox" name="entry.540942043" value="Чеканка демидовских монет" /><span class="workshop-index">02</span><span>Чеканка демидовских монет</span><span class="workshop-check" aria-hidden="true">✓</span></label>
+                <label class="workshop-card"><input type="checkbox" name="entry.540942043" value="Охота на куниц" /><span class="workshop-index">03</span><span>Охота на куниц</span><span class="workshop-check" aria-hidden="true">✓</span></label>
+              </div>
+            </fieldset>
+
+            <div class="form-field comment-field">
+              <label for="guest-comment"><span class="field-number">04</span> Комментарий организатору</label>
+              <textarea id="guest-comment" name="entry.577196794" rows="3" maxlength="1000" placeholder="Если хотите что-то уточнить"></textarea>
+            </div>
+
+            <div class="form-bottom">
+              <button class="submit-button" type="submit">Отправить ответ <span aria-hidden="true">↗</span></button>
+              <p>Ответ попадёт в таблицу организатора</p>
+            </div>
+          </form>
+
+          <noscript><p class="form-help">Для отправки ответа <a href="https://docs.google.com/forms/d/e/1FAIpQLSfNufHCUHn0jru9lvoqx1xPsjLA_sWsaLaPiySQA0vXSbu58w/viewform" target="_blank" rel="noopener noreferrer">откройте Google Форму ↗</a>.</p><style>#rsvp-form { display: none; }</style></noscript>
+
+          <div class="form-result" id="form-result" hidden aria-live="polite">
+            <div class="result-icon" aria-hidden="true">✦</div>
+            <h3>Проверяем ответ</h3>
+            <p id="result-status">Ожидаем подтверждение Google Формы…</p>
+            <iframe id="rsvp-receipt" name="rsvp-receipt" title="Подтверждение отправки анкеты" hidden></iframe>
+            <button type="button" class="result-back" id="result-back">Исправить или повторить при ошибке</button>
+          </div>
+          <p class="form-help">Если отправка не сработала, <a href="https://docs.google.com/forms/d/e/1FAIpQLSfNufHCUHn0jru9lvoqx1xPsjLA_sWsaLaPiySQA0vXSbu58w/viewform" target="_blank" rel="noopener noreferrer">откройте анкету отдельно ↗</a>.</p>
+        </div>
       </section>
     </main>
 
